@@ -14,3 +14,67 @@ A small subset of [PDFKit](https://developer.apple.com/documentation/pdfkit?lang
 ### Compatibility Note
 
 This plugin shares some command names and constants as [pdf-kit](https://github.com/miyako/4d-plugin-pdf-kit), but the signature and data types are incompatible; therefore you can not use both together. First, comment out the old code, replace the plugin, then uncomment the code to complete the transition.
+
+---
+
+## Syntax
+
+```
+PDF GET IMAGES (path;images)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+images|ARRAY PICTURE|
+
+```
+PDF GET TEXT (path;text)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+text|ARRAY TEXT|
+
+```
+PDF GET DATA (path;data)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+data|ARRAY BLOB|
+
+```
+PDF SET ROTATION (path;rotation)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+rotation|ARRAY REAL|
+
+If ``rotation`` is ``0``, ``90``, ``180`` or ``270``, PDFKit is used. Otherwise, CoreGraphics is used. To force CG for multiples of 90, pass a negative value or a value exeeding 360.
+
+```
+PDF REMOVE PAGE (path;page)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+page|LONGINT|
+
+
+```
+PDF EXCHANGE PAGES (path;page1;page2)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+page1|LONGINT|
+page2|LONGINT|
+
+
