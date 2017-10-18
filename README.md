@@ -66,9 +66,17 @@ Parameter|Type|Description
 path|TEXT|
 page|LONGINT|
 
+```
+PDF INSERT PAGE (path;page)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+page|LONGINT|
 
 ```
-PDF EXCHANGE PAGES (path;page1;page2)
+PDF EXCHANGE PAGE (path;page1;page2)
 ```
 
 Parameter|Type|Description
@@ -76,5 +84,19 @@ Parameter|Type|Description
 path|TEXT|
 page1|LONGINT|
 page2|LONGINT|
+
+```
+PDF GET PAGE ANNOTATION (path;page;type;coordinates;color;content)
+```
+
+Parameter|Type|Description
+------------|------------|----
+path|TEXT|
+page|LONGINT|
+type|ARRAY TEXT|
+coordinates|ARRAY TEXT|
+color|ARRAY TEXT|
+content|ARRAY TEXT|
+
 
 
